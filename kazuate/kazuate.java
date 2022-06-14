@@ -33,7 +33,13 @@ public class kazuate {
             }
             else{
                 if(x != y){
-                    System.out.println((y - x) + "離れています\n");
+                    if(x < y){
+                        System.out.println("正解より大きいです\n");
+                    }
+                    else{
+                        System.out.println("正解より小さいです\n");
+                    }
+
                 }
                 else{
                     if(x == y){
