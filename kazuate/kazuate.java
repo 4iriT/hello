@@ -27,36 +27,32 @@ public class kazuate {
                     System.err.println("10から99までの整数を入力してください");
                 }  
             }                       
-            
-            if(x>(y+20)){
-                System.out.println("20以上離れています");  
-            }
-            else{
-                if(x != y){
-                    if(x < y){
-                        System.out.println("正解より大きいです\n");
-                    }
-                    else{
-                        System.out.println("正解より小さいです\n");
-                    }
 
+            if(x != y){
+                if(x < y){
+                    System.out.println("正解より大きいです");
+                    if((x+20) < y){
+                        System.out.println("20以上離れています");
+                    }
                 }
                 else{
-                    if(x == y){
-                        System.out.println("正解です！");
-                        break;
+                    System.out.println("正解より小さいです");
+                    if((x-20) > y){
+                        System.out.println("20以上離れています");
                     }
                 }
+            }
+
+            else{
+                    System.out.println("正解です！");
+                    break;              
             }   
+
             if(i<4){
                 System.err.println("あと" + (4-i) + "回\n");  
             }else{
                 System.err.println("\nゲームオーバー！\n");  
-            }
-            
-        }
-               
-
+            }           
+        }             
     }
-
 }
